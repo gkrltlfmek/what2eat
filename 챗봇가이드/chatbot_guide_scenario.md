@@ -19,6 +19,6 @@ what2eat에서 제공할만 한 시나리오는 크게 식당 안내 / 시설 �
 되뭄기 질문이란 사용자로부터 <b><a href=https://chatbot.kakao.com/docs/key-concepts-parameters#%EA%B7%B8%EB%A3%B9-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0>특정 발화(=파라미터)</b></a>를 얻기 위해 최대 8번까지 물어보는 질문이다.
 
 <h4>봇 제네릭 메뉴</h4>
-<a href="https://chatbot.kakao.com/docs/key-concepts-scenario#%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4-%EC%84%A4%EC%A0%95"><img src="https://chatbot.kakao.com/docs/key-concepts-scenario#%EB%B4%87-%EC%A0%9C%EB%84%A4%EB%A6%AD-%EB%A9%94%EB%89%B4" border="0"></a>
+<a href="https://chatbot.kakao.com/docs/key-concepts-scenario#%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4-%EC%84%A4%EC%A0%95"><img src="https://chatbot.kakao.com/docs/assets/tutorial/scenario-config-generic-menu-01.png" border="0"></a>
 
 봇 제네릭 메뉴는 위 화면처럼 구성된 사용자 인터페이스를 의미한다.
