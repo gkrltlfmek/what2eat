@@ -461,17 +461,19 @@ def Restaurant():
     result = KL.search_keyword(content,category_group_code, x, y, radius)
     index = min(len(result["documents"]), 5)
     res_info = ""
-    for i in range(index) :
-        tmp_str = return_print(result["documents"][i]["place_url"])
-        print(tmp_str)
-        res_info += tmp_str +"\n"
-        tmp_str = return_print("가게 이름 : " + result["documents"][i]["place_name"])
-        res_info += tmp_str +"\n"
-        tmp_str = return_print("전화번호: " + result["documents"][i]["phone"])
-        res_info += tmp_str +"\n"
-        tmp_str = return_print("주소 : " + result["documents"][i]["road_address_name"])
-        res_info += tmp_str +"\n"
-        
+    if (index <= 0) :
+        res_info = "검색 결과가 없습니다"
+    else :
+        for i in range(index) :
+            tmp_str = return_print(result["documents"][i]["place_url"])
+            print(tmp_str)
+            res_info += tmp_str +"\n"
+            tmp_str = return_print("가게 이름 : " + result["documents"][i]["place_name"])
+            res_info += tmp_str +"\n"
+            tmp_str = return_print("전화번호: " + result["documents"][i]["phone"])
+            res_info += tmp_str +"\n"
+            tmp_str = return_print("주소 : " + result["documents"][i]["road_address_name"])
+            res_info += tmp_str +"\n"
     dataSend = {
           "version": "2.0",
           "template": {
