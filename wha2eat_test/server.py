@@ -41,7 +41,6 @@ def Message():
     req = request.get_json()
     content = req["userRequest"]["utterance"]
     content = content.replace("\n", "")
-    print(content)
     id_value = req["userRequest"]["user"]["id"]
     block_value = req["userRequest"]["block"]["id"]
     days = ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일']
@@ -473,7 +472,7 @@ def Restaurant():
             tmp_str = return_print("전화번호: " + result["documents"][i]["phone"])
             res_info += tmp_str +"\n"
             tmp_str = return_print("주소 : " + result["documents"][i]["road_address_name"])
-            res_info += tmp_str +"\n"
+            res_info += tmp_str +"\n\n"
     dataSend = {
           "version": "2.0",
           "template": {
