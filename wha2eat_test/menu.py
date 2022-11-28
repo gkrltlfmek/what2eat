@@ -44,16 +44,14 @@ def job():
 	toSave = pd.DataFrame(data)
 	toSave.to_csv("./table.csv", index=False, header=False, encoding="utf-8")
 
-def job():
- 		f.write("["+now+"] "+"update the diet!\n")
- 		f.close()
-#im3 = pyautogui.screenshot('my_region.png', region=(0, 0, 300, 300))
+	now =datetime.datetime.now()
+	now =str(now)
+	with open("./log.txt",'a') as f:
+		f.write("["+now+"] "+"update the diet!\n")
+		f.close()
 
-#job()
 schedule.every(3).hours.do(job)
-#3시간 마다 job을 진행
-schedule.run_pending()
 
 while True:
-    schedule.run_pending()
-    time.sleep(1)
+	schedule.run_pending()
+	time.sleep(1)
