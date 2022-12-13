@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 app = Flask(__name__)
 
-menuData = pd.read_csv("./table.csv", header=None, encoding="utf=8")
+
 
 def return_print(*prt_str):
     io = StringIO()
@@ -38,6 +38,7 @@ def Test():
 
 @app.route('/message_hamji', methods=['POST'])
 def Message():
+    menuData = pd.read_csv("./table.csv", header=None, encoding="utf=8")
     req = request.get_json()
     content = req["userRequest"]["utterance"]
     content = content.replace("\n", "")
